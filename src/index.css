@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+ img {
+  width: 300px;
+ 
+}
+.viptech {
+  
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .Colors {
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+  }
+  .Linha-um {
+    display: flex;
+    justify-content: space-between;
+   margin-top: 16px;
+    padding: 16px ;
+  }
+
+  .Produtos {
+   text-align: left;
+   margin: 0%;
+  }
+
+  .EstiloBotao {
+    
+  }
+ 
