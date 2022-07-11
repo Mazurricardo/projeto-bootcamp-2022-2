@@ -5,7 +5,6 @@ body {
 }
 
 
-
  img {
   width: 150px;
  
@@ -35,54 +34,60 @@ body {
    /* text-align: left;  */
    /* margin: 0%; */
    font-size: 40px;
-   font-family: 'Roboto','Raleway';
+   font-family: 'Regular','Raleway';
   }
 
   /* .logoViptech {
 
   } */
+  .EstiloBotao {
+    display: flex;
+  /* padding: 16px; */
+  align-items: center;
+  font-family: 'Bold','Roboto';
+  font-size: 26px ;
+  border-radius: 12px;
+  border: 1px solid #0F4C81;
+  background-color: #0F4C81;
+  color: #ffff;
+  width: 291px;
+  height: 64px;
+  
+  }
+
  .SpanButton {
   padding: 12px ;
+  display: flex;
+  align-items: center;
  
 
 
  }
 
-.EstiloBotao {
-  display: flex;
-padding: 16px;
-align-items: center;
-font-family: 'Bold','Roboto';
-font-size: 26px ;
-border-radius: 12px;
-border: 1px solid #0F4C81;
-background-color: #0F4C81;
-color: #ffff;
-height: 64px;
-}
 
 .pai {
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
-.pai2{
-  display: flex;
-  border: 1px solid black;
-}
-.pai3{
-display: flex;
-border: 1px solid black
-}
+
 
 .img1 {
   margin-right: 40px;
+  width: 124px;
+  height: 186px;
+  margin-left:24px; ;
 }
 
 .img2 {
  margin: 40px;
+ width: 108px;
+ height: 105px;
 }
 .img3 {
  margin: 40px;
+ width: 109px;
+ height: 139px;
+
 }
 
 .paidetodos {
@@ -115,4 +120,48 @@ border: 1px solid black
   font-size: 20px
 
 }
+.ProductName {
+  font-family: 'Bold','Roboto';
+  font-size: 24px;
+  color: #353535;
+}
+.ProductBrand {
+  font-family: 'Medium','Roboto';
+  font-size: 20px;
+
+}
+.ProductColor {
+  font-family: 'Medium','Roboto';
+  font-size: 20px;
+
+  
+}
+.ProductPrice {
+  font-family: 'Bold','Roboto';
+  color: #0F4C81;
+  font-size :32px;
+
+
+
+}
+.PaiIcones {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  justify-content: center;
+  gap: 16px;
+}
+
+.Description {
+  flex-grow: 1;
+}
+
+/* .SpanButton :hover {
+background-color: red;
+} */
+
+.EstiloBotao:hover {
+background-color: #00264B;
+}
+
  

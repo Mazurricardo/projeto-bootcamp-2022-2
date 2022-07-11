@@ -1,21 +1,41 @@
-import imagem1 from './imagens/IM1.png'
+import AddBuyButton from '../../icons/AddBuyButton';
+import AddDeleteButton from '../../icons/AddDeleteButton';
+import AddEditButton from '../../icons/AddEditButton';
+import imagem1 from './imagens/IM1.png';
 
-function Products() {
-  ;<div className="pai">
-    <figure>
-      <img className="img1" src={imagem1} alt="camera" />
-    </figure>
-    {/* <ul> */}
-    <div>
-      <h1>Câmera interna inteligente Wi-Fi Full HD iM3"</h1>
-      <h2>Intelbras</h2>
-      <h2>R$ 300,00</h2>
-      <h2>Cor: Branco</h2>
+function Products({product}) {
+  return(
 
-      {/* {' '}
-              <Products /> */}
+    <div className="pai">
+      <figure>
+        <img className={`img${product.id}`} src={product.img} alt="camera" />
+      </figure>
+      <div className='Description'>
+        <h1 className='ProductName'>{product.name}</h1>
+        <h2 className='ProductBrand'>{product.brand}</h2>
+        <h2 className='ProductColor'>{product.color}</h2>
+        <h2 className='ProductPrice'>{product.price}</h2>
+      </div>
+      <div className='PaiIcones'> 
+      <div onClick={()=>console.log('buy')}>
+      <AddBuyButton />
+        </div>
+      <div onClick={()=>console.log('edit')}>
+      <AddEditButton />
+        </div>
+      <div onClick={()=>console.log('delete')}>
+      <AddDeleteButton />
+        </div>
+      
+      
+      
+      
+      
+      </div>
     </div>
-  </div>
+  
+
+  )
 }
 
 export default Products
