@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+ /* img {
+  width: 150px; */
+ 
+/* } */
+.viptech {
+  
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .Colors {
+    width: 100%;
+    background-color: #00264B;
+    display: flex;
+    justify-content: center;
+    padding: 28px 0;
+  }
+  .Linha-um {
+    display: flex;
+    justify-content: space-between;
+   margin-top: 16px;
+    padding: 16px ;
+  }
+
+  .Produtos {
+   /* text-align: left;  */
+   /* margin: 0%; */
+   font-size: 40px;
+   font-family: 'Regular','Raleway';
+  }
+
+  /* .logoViptech {
+
+  } */
+  .EstiloBotao {
+    display: flex;
+  /* padding: 16px; */
+  align-items: center;
+  font-family: 'Bold','Roboto';
+  font-size: 26px ;
+  border-radius: 12px;
+  border: 1px solid #0F4C81;
+  background-color: #0F4C81;
+  color: #ffff;
+  width: 291px;
+  height: 64px;
+  
+  }
+
+ .SpanButton {
+  padding: 12px ;
+  display: flex;
+  align-items: center;
+ 
+
+
+ }
+
+
+.pai {
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+
+.img1 {
+  margin-right: 40px;
+  width: 124px;
+  height: 186px;
+  margin-left:24px; ;
+}
+
+.img2 {
+ margin: 40px;
+ width: 108px;
+ height: 105px;
+}
+.img3 {
+ margin: 40px;
+ width: 109px;
+ height: 139px;
+
+}
+
+.paidetodos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  width: 80%;
+}
+
+.NameProduct { 
+  font-family: 'Bold','Roboto';
+  font-size: 24px;
+
+}
+.Mark {
+ font-family: 'Medium','Raleway';
+ font-size: 20px;
+}
+.Price{
+  font-family: 'Bold','Roboto';
+  font-size: 32px;
+  color: #0F4C81;
+
+}
+.ColorOfProduct {
+  font-family: 'Medium','Roboto';
+  font-size: 20px
+
+}
+.ProductName {
+  font-family: 'Bold','Roboto';
+  font-size: 24px;
+  color: #353535;
+}
+.ProductBrand {
+  font-family: 'Medium','Roboto';
+  font-size: 20px;
+
+}
+.ProductColor {
+  font-family: 'Medium','Roboto';
+  font-size: 20px;
+
+  
+}
+.ProductPrice {
+  font-family: 'Bold','Roboto';
+  color: #0F4C81;
+  font-size :32px;
+
+
+
+}
+.PaiIcones {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  justify-content: center;
+  gap: 16px;
+}
+
+.Description {
+  flex-grow: 1;
+}
+
+/* .SpanButton :hover {
+background-color: red;
+} */
+
+.EstiloBotao:hover {
+background-color: #00264B;
+}
+
+ 
