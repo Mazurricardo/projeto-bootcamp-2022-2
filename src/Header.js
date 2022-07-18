@@ -1,4 +1,4 @@
-import LogoVip from './imagens/LogoViptech.png'
+import LogoVip from './components/Products/imagens/LogoViptech.png'
 function Header() {
   return (
     <header className="viptech">

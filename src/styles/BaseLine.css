@@ -1,0 +1,10 @@
+#BaselineAddImage {
+width: 100px;
+height: 100px;
+cursor: pointer;
+object-fit: contain;
+
+}
+.Box {
+ margin-top: 20px;
+}
