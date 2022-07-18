@@ -1,56 +1,23 @@
-/* .PaginaCarrinhoCompleta {
-  width: 100vw;
-  height: 100vh;
-} */
-
-.PaginaCart{
-
-}
-.TitulosPrincipaisCarrinho{
-display: flex;
-align-items: center;
-justify-content: center;
-justify-content: space-between;
-
-
-}
-.PaginaCarrinhoCompleta {
-
-  background-color: aquamarine;
+.Introducao {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid red ;
+  width:80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: baseline;
+  
 }
-.Esquerda {
-  width: 60vw;
-  /* height: 100vh; */
+.ConteudoTotal {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid blueviolet;
+  width: 80%;
+  margin:0 auto;
+  justify-content: space-between;
 }
-.Direita {
-  width: 40vw;
-  /* height: 100vh */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.ConteudoTotal .E{
+  border : 1px solid #b2b2b2;
+  width : 50%;
+  border-radius: 8px;
+  
+  }
 
-}
-.ProdutoEdescricao {
- display: flex;
-}
-.Descricao {
-  flex-direction: column;
-  margin-top: 70px;
-}
-.QuantidadeEpreco {
-  display: flex;
-background-color: aqua;
-justify-content: space-between;
-margin-left: 30px;
-}
-
-.ImgCarrinho {
-  padding: 30px;
-}
