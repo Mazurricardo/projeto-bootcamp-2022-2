@@ -5,9 +5,9 @@ import { Stack } from '@mui/material'
 export default function BuyButtonCart() {
   return (
     <div className="BasicButtonsDiv">
-      <Stack spacing={2} direction="row">
-        <Button variant="contained">Pagar</Button>
-      </Stack>
+      {/* <Stack spacing={2} direction="row"> */}
+        <Button fullWidth variant="contained">Pagar</Button>
+      {/* </Stack> */}
     </div>
   )
 }

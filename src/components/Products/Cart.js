@@ -6,17 +6,23 @@ import './../../styles/CartStyles.css'
 import BuyButtonCart from './Buttons/AddBuyButton.js'
 import { productFake } from './FakeData.js'
 import Products from './Products'
+import Counter from './Buttons/Counter'
 function Cart() {
+  
   console.log(productFake[0])
   return (
     <div className="PaginaCart">
       <Header />
+      <div className='ButtonHome'>
+
       <Link to={'/'}>Home{''}</Link>
-      <div className="Introducao">
-        <h1>Carrinho</h1>
-        <h2>Resumo do pedido</h2>
+      <h2> &#62; Carrinho </h2>
       </div>
-      <div className="ConteudoTotal">
+      <div className="Introducao">
+        <h2 className='Title'>Carrinho</h2>
+        <h2 className='Title ResumoTitle'>Resumo do pedido</h2>
+      </div>
+      <div className="ConteudoTotal"> 
         <div className="E">
           <div className="InformacoesProduto">
             <img className="ImagemCamera" src={Imagem1} alt="imagem camera" />
@@ -24,33 +30,34 @@ function Cart() {
               <h2>Câmera interna inteligente Wi-Fi Full HD iM3</h2>
               <h2>Intelbras</h2>
               <h2>Cor:Branco</h2>
-              <hr />
             </div>
           </div>
+              <hr className='Divider' />
           <div className="LinhaQuantidade">
             <div className="QtdContador">
               <h2>Quantidade</h2>
-              <button>Contador</button>
+            <Counter/>
             </div>
             <div>R$ 300,00</div>
           </div>
         </div>
         <div className="D">
+          <div className="DescriptionD">
           <div className="LinhaSubtotal">
             <div>Subtotal(1 item)</div>
-            <div>R$ 300,00</div>
+            <div className='ValorS'>R$ 300,00</div>
           </div>
           <hr />
           <div className="LinhaFrete">
             <div>Frete</div>
-            <div>R$ 30,00</div>
+            <div className='ValorF'>R$ 30,00</div>
           </div>
           <hr />
           <div className="LinhaValorTotal">
             <div>Valor Total</div>
-            <div>R$ 330,00</div>
+            <div className='ValorVT'>R$ 330,00</div>
           </div>
-          <hr />
+          </div>
           <div className="BuyButtonCart">
             <BuyButtonCart />
           </div>

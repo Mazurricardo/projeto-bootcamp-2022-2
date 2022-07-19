@@ -1,3 +1,15 @@
+*{
+
+  font-family: 'Raleway', sans-serif;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.ButtonHome {
+  margin-left: 130px;
+  margin-top: 24px ;
+}
+
+
 .Introducao {
   display: flex;
   border: 1px solid red ;
@@ -5,17 +17,30 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 40px;
+  margin-top: 40px;
   
 }
-.Introducao > h2 {
-background-color: aquamarine;
-width: 50%;
+/* .CarrinhoTitle {
+  background-color: aquamarine;
+  width: 50%;
+  font-family: 'Raleway','Sans-serif';
+  font-size :28px;
+  height: 100%;
+  margin:0;
 
 }
-.Introducao > h1 {
+
+.ResumoTitle{
   background-color: blue;
   width: 50%;
+  font-size: 40px;
+} */
+.Title{
+  font-size: 30px;
+  border: 1px solid grey;
+}
+.ResumoTitle {
+  width: 30%;
 }
 .ConteudoTotal {
   display: flex;
@@ -23,53 +48,74 @@ width: 50%;
   width: 80%;
   margin:0 auto;
   justify-content: space-between;
+  margin-top : 50px;
   
 }
 .ConteudoTotal .E{
   border : 1px solid #b2b2b2;
-  width : 50%;
+  width : 80%;
   border-radius: 8px;
+  flex-grow: 1;
   
   
   }
+  .Divider {
+    margin: 0 auto;
+    width: 90%;
+  }
   .ConteudoTotal .D{
     border: 1px solid blue;
-    width: 50%;
+    width: 30%;
     border-radius: 8px;
-    padding-left: 40px;
+    padding:0 24px;
+    
 
   }
   .InformacoesProduto {
     display: flex;
-    padding: 40px;
+    /* padding: 40px; */
+    justify-content: center;
+    padding: 25px 10px;
 
 
   }
   .InformacoesProduto > .ImagemCamera  {
 
 height: 140px;
-margin-right: 40px;
+margin-right: 16px;
 border: 1px solid black;
 
 
 
   }
   .Description {
-margin-top: 40px;
+
+margin-bottom: 60px;
+font-size: 14px;
+border: 1px solid blueviolet;
+width: 100%;
+word-wrap: none;
+
+
+  }
+  .DescriptionD {
+    font-size: 16px;
 
   }
 .LinhaQuantidade {
   display: flex;
-  justify-content: center;
   justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 30px;
+  align-items: center;
+  margin-bottom: 32px;
   margin-left: 40px;
   margin-right: 30px;
+  padding-top: 20px;
+
   
 }
 .QtdContador {
   display: flex;
+  align-items: center;
 }
 .QtdContador > h2 {
   margin-right: 38px;
@@ -78,12 +124,42 @@ margin-top: 40px;
 
 .LinhaSubtotal {
   display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 20px ;
+  /* align-items: center; */
 }
 .LinhaFrete {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: baseline;
+  align-items: center;
+  margin-top: 20px;
 }
 .LinhaValorTotal {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 32px;
+
+}
+
+.ValorS {
+  margin-right: 40px;
+
+}
+.ValorF {
+  margin-right: 40px;
+
+}
+.ValorVT {
+  margin-right: 40px;
+}
+
+.BuyButtonCart {
 
 }
 
