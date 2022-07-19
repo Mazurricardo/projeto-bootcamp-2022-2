@@ -5,7 +5,17 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 40px;
   
+}
+.Introducao > h2 {
+background-color: aquamarine;
+width: 50%;
+
+}
+.Introducao > h1 {
+  background-color: blue;
+  width: 50%;
 }
 .ConteudoTotal {
   display: flex;
@@ -13,11 +23,68 @@
   width: 80%;
   margin:0 auto;
   justify-content: space-between;
+  
 }
 .ConteudoTotal .E{
   border : 1px solid #b2b2b2;
   width : 50%;
   border-radius: 8px;
   
+  
   }
+  .ConteudoTotal .D{
+    border: 1px solid blue;
+    width: 50%;
+    border-radius: 8px;
+    padding-left: 40px;
+
+  }
+  .InformacoesProduto {
+    display: flex;
+    padding: 40px;
+
+
+  }
+  .InformacoesProduto > .ImagemCamera  {
+
+height: 140px;
+margin-right: 40px;
+border: 1px solid black;
+
+
+
+  }
+  .Description {
+margin-top: 40px;
+
+  }
+.LinhaQuantidade {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 30px;
+  
+}
+.QtdContador {
+  display: flex;
+}
+.QtdContador > h2 {
+  margin-right: 38px;
+  
+}
+
+.LinhaSubtotal {
+  display: flex;
+}
+.LinhaFrete {
+  display: flex;
+}
+.LinhaValorTotal {
+  display: flex;
+
+}
+
 
