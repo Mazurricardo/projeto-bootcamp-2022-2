@@ -3,6 +3,7 @@ import AddCircle from '../icons/AddCircle'
 import Products from '../components/Products/Products'
 import Header from './Header'
 import { productFake } from '../components/Products/FakeData'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -13,12 +14,14 @@ function Home() {
         <div className="wrapper">
           <div className="Linha-um">
             <p className="Produtos">Produtos</p>
-            <button className="EstiloBotao">
-              <span className="SpanButton">
-                <AddCircle />
-              </span>
-              adicionar produto
-            </button>
+            <Link to="/comprar">
+              <button className="EstiloBotao">
+                <span className="SpanButton">
+                  <AddCircle />
+                </span>
+                adicionar produto
+              </button>
+            </Link>
           </div>
           <div>
             {productFake.map((item) => {

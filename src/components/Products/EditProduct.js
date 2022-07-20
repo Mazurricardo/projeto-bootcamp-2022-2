@@ -15,7 +15,7 @@ function EditProduct() {
               <Link className="HomeLinkEditProduct" to={'/'}>
                 Home{' '}
               </Link>
-              <h1 className="EditarProduto">Adicionar Produto</h1>
+              <h1 className="EditarProduto">Editar Produtos</h1>
 
               <FormPropsTextFields />
               <FormControl />

@@ -30,7 +30,7 @@ body {
   .Produtos {
    /* text-align: left;  */
    /* margin: 0%; */
-   font-size:40px;
+   font-size: 30px;
    font-family: 'Regular','Raleway';
   }
 
@@ -47,8 +47,8 @@ body {
   border: 1px solid #0F4C81;
   background-color: #0F4C81;
   color: #ffff;
-  width: 291px;
-  height: 64px;
+  width: 260px;
+  height: 54px;
   
   }
 
@@ -99,16 +99,16 @@ body {
 
 .NameProduct { 
   font-family: 'Bold','Roboto';
-  font-size: 24px;
+  font-size: 16px;
 
 }
 .Mark {
  font-family: 'Medium','Raleway';
- font-size: 20px;
+ font-size: 16px;
 }
 .Price{
   font-family: 'Bold','Roboto';
-  font-size: 32px;
+  font-size: 20px;
   color: #0F4C81;
 
 }
@@ -119,24 +119,26 @@ body {
 }
 .ProductName {
   font-family: 'Bold','Roboto';
-  font-size: 24px;
+  font-size: 21px;
   color: #353535;
+  margin-bottom: 8px;
 }
 .ProductBrand {
-  font-family: 'Medium','Roboto';
-  font-size: 20px;
+  font-family: 'Raleway','Roboto';
+  font-size: 16px;
+  margin-bottom: 8px;
 
 }
 .ProductColor {
-  font-family: 'Medium','Roboto';
-  font-size: 20px;
+  font-family: 'Raleway','Roboto';
+  font-size: 16px;
 
   
 }
 .ProductPrice {
   font-family: 'Bold','Roboto';
   color: #0F4C81;
-  font-size :32px;
+  font-size :16px;
 
 
 
@@ -144,13 +146,14 @@ body {
 .PaiIcones {
   display: flex;
   align-items: center;
-  width: 250px;
+  width: 230px;
   justify-content: center;
   gap: 16px;
 }
 
 .Description {
   flex-grow: 1;
+  margin-top: 34px;
 }
 
 /* .SpanButton :hover {
