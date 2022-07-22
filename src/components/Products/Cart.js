@@ -23,6 +23,10 @@ function Cart() {
         <h2 className="Title">Carrinho</h2>
         <h2 className="Title ResumoTitle">Resumo do pedido</h2>
       </div>
+      <div className="Introducao">
+        <h2 className="Title">Carrinho</h2>
+        <h2 className="Title ResumoTitle">Resumo do pedido</h2>
+      </div>
       <div className="ConteudoTotal">
         <div className="E">
           <div className="InformacoesProduto">
