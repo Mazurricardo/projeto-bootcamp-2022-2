@@ -1,0 +1,21 @@
+.BtnDecrescente {
+margin-right: 12px;
+    background-color: aquamarine;
+
+    
+
+}
+.BtnCrescente {
+
+margin-left: 12px;
+}
+
+.Contagem {
+background-color: blue;
+
+}
+
+.ContadorGeral {
+    border  : 1px solid black;
+    
+}

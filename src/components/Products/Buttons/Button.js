@@ -4,6 +4,8 @@ import Button from '@mui/material/Button'
 import BasicButtons from './AddBasicButton'
 import BaselineAdd from '../imagens/BaselineAdd.png'
 import './../../../styles/BaseLine.css'
+import * as yup from 'yup'
+import { userSchema } from '../../../Validations/UserValidations'
 
 import {
   FormControl,
@@ -51,14 +53,26 @@ export default function FormPropsTextFields() {
           id="outlined-search"
           label="Nome do produto"
           type="search"
+          placeholder="Digite o nome do produto"
         />
       </div>
       <div className="BandOfProductEdit">
-        <TextField fullWidth id="outlined-search" label="Marca" type="search" />
+        <TextField
+          fullWidth
+          id="outlined-search"
+          label="Marca"
+          type="search"
+          placeholder="Digite a marca do produto"
+        />
       </div>
 
       <div className="ValueOfProductEdit">
-        <TextField id="outlined-search" label="Valor" type="search" />
+        <TextField
+          id="outlined-search"
+          label="Valor"
+          type="search"
+          placeholder="R$ 000,00"
+        />
       </div>
 
       <div className="WidthOfInputDate">
@@ -72,6 +86,7 @@ export default function FormPropsTextFields() {
               label="Cor"
               onChange={handleChange}
               size=""
+              placeholder="Selecione a cor"
             >
               <MenuItem value={'Azul'}>Azul</MenuItem>
               <MenuItem value={'Branco'}>Branco</MenuItem>

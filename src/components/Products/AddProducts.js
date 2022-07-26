@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import BasicButtons from './Buttons/AddBasicButton'
 import BaselineAdd from '../Products/imagens/BaselineAdd.png'
-import Header from './../../Header'
+import Header from './../../Pages/Header'
 import './../../styles/BaseLine.css'
 import {
   FormControl,

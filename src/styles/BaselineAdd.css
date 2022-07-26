@@ -7,7 +7,6 @@ object-fit: contain;
 }
 .Box {
  margin-top: 20px;
- border: 2px solid black;
- border-style: dashed;
- border-color: rgba(217, 217, 217, 1);
+
 }
+

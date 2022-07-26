@@ -53,7 +53,7 @@
   /* border: 1px solid blueviolet; */
   width: 80%;
   margin:0 auto;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top : 50px;
   
 }
@@ -62,6 +62,7 @@
   width : 80%;
   border-radius: 8px;
   flex-grow: 1;
+  height: 320px;
   
   
   }
@@ -172,5 +173,26 @@ word-wrap: none;
   font-size: 16px;
   margin-top: 4px;
 }
+.PagamentoRealizado {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #039500;
+  border: 1px solid#039500;
+  border-radius: 7px;
+  margin-top: 80px;
+  height: 220px;
 
+
+}
+.PagamentoRealizadoH2 {
+  font-size: 20px;
+  align-items: center;
+}
+
+.PagamentoRealizado > p {
+  margin-top: 12px;
+}
 

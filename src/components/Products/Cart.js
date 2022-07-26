@@ -23,10 +23,7 @@ function Cart() {
         <h2 className="Title">Carrinho</h2>
         <h2 className="Title ResumoTitle">Resumo do pedido</h2>
       </div>
-      <div className="Introducao">
-        <h2 className="Title">Carrinho</h2>
-        <h2 className="Title ResumoTitle">Resumo do pedido</h2>
-      </div>
+
       <div className="ConteudoTotal">
         <div className="E">
           <div className="InformacoesProduto">
@@ -65,6 +62,15 @@ function Cart() {
           </div>
           <div className="BuyButtonCart">
             <BuyButtonCart />
+          </div>
+          <div className="PagamentoRealizado">
+            <h2 className="PagamentoRealizadoH2">
+              Pagamento realizado com Sucesso!{' '}
+            </h2>
+            <p>Este pagamento foi realizado com </p>
+            <p>3 cédulas de R$ 100,00</p>
+            <p>1 cédula de R$ 20,00</p>
+            <p>1 cédula de R$ 10,00</p>
           </div>
         </div>
       </div>
