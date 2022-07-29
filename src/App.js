@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/comprar" element={<AddProducts />} />
         <Route exact path="/carrinho" element={<Cart />} />
-        <Route exact path="/editar" element={<EditProduct />} />
+        <Route exact path="/editar/:id" element={<EditProduct />} />
       </Routes>
     </BrowserRouter>
   )

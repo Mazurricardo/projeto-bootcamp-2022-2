@@ -186,6 +186,9 @@ word-wrap: none;
   border-radius: 7px;
   margin-top: 80px;
   height: 220px;
+ 
+  opacity: 0;
+  
 
 
 }

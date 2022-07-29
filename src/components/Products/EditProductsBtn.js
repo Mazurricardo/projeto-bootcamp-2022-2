@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import BasicButtons from './AddBasicButton'
+import BasicButtons from './../Products/EditBasicButtons'
 import BaselineAdd from '../imagens/BaselineAdd.png'
 import './../../../styles/BaseLine.css'
 import * as yup from 'yup'
@@ -17,21 +17,23 @@ import {
   Select,
   TextField,
 } from '@mui/material'
+import { useParams } from 'react-router-dom'
 
-export default function FormPropsTextFields() {
+export default function FormPropsFields() {
   const [nome, setNome] = React.useState('')
   const [marca, setBand] = React.useState('')
   const [valor, setPrice] = React.useState('')
   const [color, setColor] = React.useState('Azul')
+  const { id } = useParams()
   // const navigate = useNavigate()
 
   async function handleSubmit() {
     try {
-      api.post('/product', {
-        name: nome,
-        band: marca,
-        price: valor,
-        color: color,
+      api.put(`/product/${id}`, {
+        name: data.nome,
+        band: data.marca,
+        price: formatNumber(data.valor),
+        color: data.color,
       })
     } catch (error) {
       console.log(error)

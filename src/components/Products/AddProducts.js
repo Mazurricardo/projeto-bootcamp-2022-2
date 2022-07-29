@@ -16,48 +16,25 @@ import {
 } from '@mui/material'
 
 function AddProducts() {
-  const [product, setProduct] = React.useState([])
-
-  React.useEffect(() => {
-    api.get('/products').then(({ data }) => {
-      setProduct(data.product)
-    })
-    console.log(product)
-  }, [])
   return (
-    <>
-      <>
-        {product?.map((product) => (
-          <product
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            band={product.band}
-            color={product.color}
-          />
-        ))}
-      </>
-    </>
+    <div>
+      <Header />
+      <div className="WrapperEditProduct">
+        <div className="EditProductMain">
+          <div className="Container">
+            <div className="PaiDosInput">
+              {/* <Link className="HomeLinkEditProduct" to={'/'}>
+                Home{' '}
+              </Link> */}
+              <h1 className="EditarProduto">Adicionar Produto</h1>
 
-    // <div>
-    //   <Header />
-    //   <div className="WrapperEditProduct">
-    //     <div className="EditProductMain">
-    //       <div className="Container">
-    //         <div className="PaiDosInput">
-    //           {/* <Link className="HomeLinkEditProduct" to={'/'}>
-    //             Home{' '}
-    //           </Link> */}
-    //           <h1 className="EditarProduto">Adicionar Produto</h1>
-
-    //           <FormPropsTextFields />
-    //           <FormControl />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-
-    // </div>
+              <FormPropsTextFields />
+              <FormControl />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

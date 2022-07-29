@@ -7,7 +7,13 @@ import BuyButtonCart from './Buttons/AddBuyButton.js'
 import { productFake } from './FakeData.js'
 import Products from './Products'
 import Counter from './Buttons/Counter'
+// import { useRef } from 'react'
+import { style } from '@mui/system'
 function Cart() {
+  function showCaixa() {
+    // const getCaixa = useRef('EfeitoBotaoPagar')
+    // getCaixa.current.style.opacity = 1
+  }
   console.log(productFake[0])
   return (
     <div className="PaginaCart">
@@ -60,17 +66,19 @@ function Cart() {
               <div className="ValorVT">R$ 330,00</div>
             </div>
           </div>
-          <div className="BuyButtonCart">
-            <BuyButtonCart />
-          </div>
-          <div className="PagamentoRealizado">
-            <h2 className="PagamentoRealizadoH2">
-              Pagamento realizado com Sucesso!{' '}
-            </h2>
-            <p>Este pagamento foi realizado com </p>
-            <p>3 cédulas de R$ 100,00</p>
-            <p>1 cédula de R$ 20,00</p>
-            <p>1 cédula de R$ 10,00</p>
+          <div className="efeitoBotaoPagar" onClick={showCaixa}>
+            <div className="BuyButtonCart">
+              <BuyButtonCart />
+            </div>
+            <div className="PagamentoRealizado">
+              <h2 className="PagamentoRealizadoH2">
+                Pagamento realizado com Sucesso!{' '}
+              </h2>
+              <p>Este pagamento foi realizado com </p>
+              <p>3 cédulas de R$ 100,00</p>
+              <p>1 cédula de R$ 20,00</p>
+              <p>1 cédula de R$ 10,00</p>
+            </div>
           </div>
         </div>
       </div>
