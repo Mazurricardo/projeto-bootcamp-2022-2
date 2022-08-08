@@ -5,11 +5,11 @@ import BasicButtons from './AddBasicButton'
 import BaselineAdd from '../imagens/BaselineAdd.png'
 import './../../../styles/BaseLine.css'
 import * as yup from 'yup'
-import { userSchema } from '../../../Validations/UserValidations'
+// import { userSchema } from '../../../Validations/UserValidations'
 import api from '../api'
 // import Home from './../../../Pages/Home'
 // import { useNavigate } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
 import {
   FormControl,
   InputLabel,
@@ -19,24 +19,29 @@ import {
 } from '@mui/material'
 
 export default function FormPropsTextFields() {
+  const navigate = useNavigate()
   const [nome, setNome] = React.useState('')
   const [marca, setBand] = React.useState('')
   const [valor, setPrice] = React.useState('')
   const [color, setColor] = React.useState('Azul')
+  const [imagem, setImagem] = React.useState('')
   // const navigate = useNavigate()
 
   async function handleSubmit() {
+    const file = new FormData()
+    file.append('fImage', imagem)
+    file.append('name', nome)
+    file.append('band', marca)
+    file.append('price', valor)
+    file.append('color', color)
+
     try {
-      api.post('/product', {
-        name: nome,
-        band: marca,
-        price: valor,
-        color: color,
-      })
+      await api.post('/product', file)
     } catch (error) {
       console.log(error)
     }
     console.log(nome, marca, valor, color)
+    navigate('/')
   }
 
   function handleChangeName(e) {
@@ -60,6 +65,7 @@ export default function FormPropsTextFields() {
       reader.onload = () => {
         console.log('rodou')
         ImgRef.current.src = reader.result
+        setImagem(fImage.current.files[0])
       }
       reader.readAsDataURL(fImage.current.files[0])
     })

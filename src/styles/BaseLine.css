@@ -11,3 +11,7 @@ object-fit: contain;
  border-style: dashed;
  border-color: rgba(217, 217, 217, 1);
 }
+
+.AdicionarHome {
+  color: rgb(85, 26, 139)
+}

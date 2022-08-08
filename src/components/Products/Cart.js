@@ -7,14 +7,52 @@ import BuyButtonCart from './Buttons/AddBuyButton.js'
 import { productFake } from './FakeData.js'
 import Products from './Products'
 import Counter from './Buttons/Counter'
+import formatNumber from './Buttons/formatNumber.js'
 // import { useRef } from 'react'
 import { style } from '@mui/system'
-function Cart() {
-  function showCaixa() {
-    // const getCaixa = useRef('EfeitoBotaoPagar')
-    // getCaixa.current.style.opacity = 1
+import { useState, useEffect } from 'react'
+import api from './api.js'
+import { useParams } from 'react-router-dom'
+import contagemNumeroNotas from '../LogicaNotas.js'
+
+function Cart({ Count }) {
+  const [notes, numberNotes] = useState([])
+  const { id } = useParams()
+  const [product, setProduct] = useState('')
+  const [inputValue, setInputValue] = useState(1)
+  const [open, setOpen] = useState(false)
+  const subTotal = product.price * inputValue
+  const frete = subTotal * 0.1
+  const total = subTotal + frete
+
+  console.log(product)
+
+  const handlePurchase = () => {
+    numberNotes(contagemNumeroNotas(total))
+
+    setOpen((prevState) => !prevState)
   }
-  console.log(productFake[0])
+
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        const { data } = await api.get(`/product/${id}`)
+
+        setProduct(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetch()
+  }, [id])
+
+  function showCaixa() {
+    const getCaixa = document.getElementById('efeitoBotaoPagar')
+    getCaixa.style.opacity = '1'
+
+    console.log('esta Funcionando')
+  }
+
   return (
     <div className="PaginaCart">
       <Header />
@@ -43,8 +81,8 @@ function Cart() {
           <hr className="Divider" />
           <div className="LinhaQuantidade">
             <div className="QtdContador">
-              <h2>Quantidade</h2>
-              <Counter />
+              <h2>Quantidade:</h2>
+              <Counter setInputValue={setInputValue} />
             </div>
             <div>R$ 300,00</div>
           </div>
@@ -52,33 +90,41 @@ function Cart() {
         <div className="D">
           <div className="DescriptionD">
             <div className="LinhaSubtotal">
-              <div>Subtotal(1 item)</div>
-              <div className="ValorS">R$ 300,00</div>
+              <div>Subtotal: {inputValue} item</div>
+              <div className="ValorS">{`R$ ${formatNumber(subTotal)}`}</div>
             </div>
             <hr />
             <div className="LinhaFrete">
               <div>Frete</div>
-              <div className="ValorF">R$ 30,00</div>
+              <div className="ValorF">{frete}</div>
             </div>
             <hr />
             <div className="LinhaValorTotal">
               <div>Valor Total</div>
-              <div className="ValorVT">R$ 330,00</div>
+              <div className="ValorVT">{total}</div>
             </div>
           </div>
-          <div className="efeitoBotaoPagar" onClick={showCaixa}>
+          <div
+            id="efeitoBotaoPagar"
+            className="efeitoBotaoPagar"
+            // onClick={showCaixa}
+          >
             <div className="BuyButtonCart">
-              <BuyButtonCart />
+              <BuyButtonCart showCaixa={handlePurchase} open={open} />
             </div>
-            <div className="PagamentoRealizado">
-              <h2 className="PagamentoRealizadoH2">
-                Pagamento realizado com Sucesso!{' '}
-              </h2>
-              <p>Este pagamento foi realizado com </p>
-              <p>3 cédulas de R$ 100,00</p>
-              <p>1 cédula de R$ 20,00</p>
-              <p>1 cédula de R$ 10,00</p>
-            </div>
+            {open && (
+              <div className="PagamentoRealizado">
+                <h2 className="PagamentoRealizadoH2">
+                  Pagamento realizado com Sucesso!{' '}
+                </h2>
+                <p>Este pagamento foi realizado com </p>
+                {notes.map((item) => (
+                  <p>
+                    {item.amount}cédula de R${item.bankNote}
+                  </p>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

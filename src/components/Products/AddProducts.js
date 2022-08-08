@@ -1,5 +1,6 @@
 import * as React from 'react'
 import FormPropsTextFields from './Buttons/Button.js'
+import { Link } from 'react-router-dom'
 // import Box from '@mui/material/Box'
 // import Button from '@mui/material/Button'
 // import BasicButtons from './Buttons/AddBasicButton'
@@ -23,9 +24,12 @@ function AddProducts() {
         <div className="EditProductMain">
           <div className="Container">
             <div className="PaiDosInput">
-              {/* <Link className="HomeLinkEditProduct" to={'/'}>
-                Home{' '}
-              </Link> */}
+              <div className="homeAddProductLink">
+                <Link className="HomeLinkEditProduct" to={'/'}>
+                  Home{' '}
+                </Link>
+                <u className="AdicionarHome">&#62; Adicionar</u>
+              </div>
               <h1 className="EditarProduto">Adicionar Produto</h1>
 
               <FormPropsTextFields />

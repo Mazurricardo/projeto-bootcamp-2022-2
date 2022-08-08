@@ -41,23 +41,30 @@ body {
     display: flex;
   /* padding: 16px; */
   align-items: center;
-  font-family: 'Bold','Roboto';
-  font-size: 26px ;
+  /* font-family: 'Bold','Roboto'; */
+  font-size: 18px ;
   border-radius: 12px;
   border: 1px solid #0F4C81;
   background-color: #0F4C81;
   color: #ffff;
-  width: 260px;
-  height: 54px;
+  width: 220px;
+  height: 42px;
+  text-decoration: none;
   
+  }
+  .EstiloBotao:hover {
+    cursor: pointer;
+
   }
 
  .SpanButton {
   padding: 12px ;
   display: flex;
   align-items: center;
- 
 
+ }
+ .SpanButton :hover {
+  cursor: pointer;
 
  }
 
@@ -118,7 +125,7 @@ body {
 
 }
 .ProductName {
-  font-family: 'Bold','Roboto';
+  /* font-family: 'Bold','Roboto'; */
   font-size: 21px;
   color: #353535;
   margin-bottom: 8px;
@@ -136,9 +143,9 @@ body {
   
 }
 .ProductPrice {
-  font-family: 'Bold','Roboto';
+  /* font-family: 'Bold','Roboto'; */
   color: #0F4C81;
-  font-size :16px;
+  font-size :22px;
 
 
 
@@ -153,7 +160,9 @@ body {
 
 .Description {
   flex-grow: 1;
-  margin-top: 34px;
+  margin-top: 41px;
+  padding: 16px;
+  margin-left: 16px;
 }
 
 /* .SpanButton :hover {
@@ -164,4 +173,31 @@ background-color: red;
 background-color: #00264B;
 }
 
- 
+.imagemCamera {
+  margin: 1px solid black;
+  /* background-color: #00264B; */
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+  margin-top: 40px;
+  object-fit: contain;
+
+}
+
+.objectFit {
+height: 100px;
+width: 100px;
+object-fit: contain;
+
+
+}
+
+figure > img {
+  height: 108px;
+  width: 102px;
+
+}
+
+.homeAddProductLink {
+  margin-bottom: 24px;
+}

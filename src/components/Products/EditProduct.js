@@ -1,7 +1,7 @@
 import Header from '../../Pages/Header.js'
 import { Link } from 'react-router-dom'
 import '../../styles/EditProducts.css'
-import FormPropsTextFields from './Buttons/Button'
+import FormPropsFields from './EditProductsBtn'
 import { FormControl } from '@mui/material'
 
 function EditProduct() {
@@ -12,13 +12,16 @@ function EditProduct() {
         <div className="EditProductMain">
           <div className="Container">
             <div className="PaiDosInput">
-              <Link className="HomeLinkEditProduct" to={'/'}>
-                Home{' '}
-              </Link>
+              <div>
+                <Link className="HomeLinkEditProduct" to={'/'}>
+                  Home{' '}
+                </Link>
+                <u className="AdicionarBHome">&#62; Editar</u>
+              </div>
               <h1 className="EditarProduto">Editar Produtos</h1>
 
-              <FormPropsTextFields />
-              <FormControl />
+              <FormPropsFields />
+              {/* <FormControl /> */}
             </div>
           </div>
         </div>

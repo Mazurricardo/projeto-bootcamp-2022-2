@@ -4,17 +4,36 @@ import Products from '../components/Products/Products'
 import Header from './Header'
 import { productFake } from '../components/Products/FakeData'
 import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import api from '../components/Products/api'
 
 function Home() {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        const { data } = await api.get('/product')
+        console.log(data)
+
+        setProducts(data)
+        console.log(products)
+      } catch (error) {
+        console.log('error')
+      }
+    }
+    fetch()
+  }, [])
+
   return (
-    <body>
+    <>
       <Header />
 
       <main className="paidetodos">
         <div className="wrapper">
           <div className="Linha-um">
             <p className="Produtos">Produtos</p>
-            <Link to="/comprar">
+            <Link to="/comprar" style={{ textDecoration: 'none' }}>
               <button className="EstiloBotao">
                 <span className="SpanButton">
                   <AddCircle />
@@ -24,13 +43,13 @@ function Home() {
             </Link>
           </div>
           <div>
-            {productFake.map((item) => {
-              return <Products product={item} />
-            })}
+            {products.map((item) => (
+              <Products key={item.id} product={item} />
+            ))}
           </div>
         </div>
       </main>
-    </body>
+    </>
   )
 }
 
